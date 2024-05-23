@@ -5,10 +5,10 @@ client = Groq(
     api_key="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",
 )
 
-st.title("Pyro_coder")
-prompt= st.text_input("Get detailed docs on anything Python:")
-submit_button = st.button("Jaldi Bata")
-context_prompt = f"Act as an experienced technical trainer, who focuses in python and machine learning, give proper definitions, points to remember, code examples, summary, five practice questions and 10 interview questions and answers  on the topic  {prompt}"
+st.title("LLM Study Assistant")
+prompt= st.text_input("Enter a topic related to Language Models (LLM):")
+submit_button = st.button("Get Information")
+context_prompt = f"You are an AI language model tutor specializing in Language Models. Provide a comprehensive overview of the topic {prompt}. Include the following: an introduction, key concepts, technical details, practical applications, ethical considerations, practical implementation with code examples, additional resources for further learning, and common questions and troubleshooting tips."
 
 chat_completion = client.chat.completions.create(
     messages=[
